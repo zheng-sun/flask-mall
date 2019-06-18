@@ -10,11 +10,11 @@ import polls.apps as poll_app
 app = Flask(__name__)
 manager = Manager(app)
 
-for item in config.APP_ITEM:
-    __import__(item)
+# for item in config.APP_ITEM:
+#     __import__(item)
 
-#poll_app.init_app(app)
-#poll_app.init_command(manager)
+poll_app.init_app(app)
+poll_app.init_command(manager)
 
 #manager.add_command('db', MigrateCommand)
 
